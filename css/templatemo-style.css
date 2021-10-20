@@ -34,6 +34,11 @@ a:focus {
 .tm-section-pad-top {
   padding-top: 135px;
 }
+@media (max-width: 776px) {
+  .tm-section-pad-top {
+    padding-top: 10px;
+  }
+}
 
 .tm-text-primary {
   color:  #bdaea4 ;
@@ -158,6 +163,12 @@ a:focus {
     background-position: bottom -450px;
   }
 }
+@media (max-width: 776px) {
+  #hero {
+    height: 70vh;
+  }
+}
+
 
 .tm-hero-text-container {
   width: 100%;
