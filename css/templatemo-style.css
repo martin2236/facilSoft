@@ -1,10 +1,4 @@
-/*
 
-The Town
-
-https://templatemo.com/tm-525-the-town
-
-*/
 
 html {
   font-size: 18px;
@@ -132,10 +126,10 @@ a:focus {
 /* Hero */
 
 #hero {
-  background-image: url(../img/gallery-img-02.jpg);
+  background-image: url(../img/intro.jpg);
   background-repeat: no-repeat;
   background-size: 100% 150%;
-  background-position: bottom;
+  background-position: bottom 50%;
   height: 100vh;
   min-height: 375px;
   position: relative;
@@ -143,25 +137,25 @@ a:focus {
 
 @media (min-height: 830px) {
   #hero {
-    background-position: center -210px;
+    background-position: bottom -210px;
   }
 }
 
 @media (min-height: 680px) and (max-height: 829px) {
   #hero {
-    background-position: center -300px;
+    background-position: bottom -300px;
   }
 }
 
 @media (min-height: 500px) and (max-height: 679px) {
   #hero {
-    background-position: center -400px;
+    background-position: bottom -400px;
   }
 }
 
 @media (max-height: 499px) {
   #hero {
-    background-position: center -450px;
+    background-position: bottom -450px;
   }
 }
 
@@ -419,10 +413,10 @@ figure.effect-honey:hover h2 i {
 
 #contact {
   color: white;
-  background-image: url(../img/telefono_1920x1280.jpg);
+  
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(../img/telefono_1920x1280.jpg);
   background-position: center;
-  background-repeat: no-repeat;
-  min-height: 850px;
+   min-height: 850px;
   position: relative;
   padding-bottom: 50px;
   padding-top: 160px;
@@ -457,7 +451,7 @@ figure.effect-honey:hover h2 i {
 
 .tm-contact-item-link:hover i,
 .tm-contact-item-link:hover span {
-  color:  #5e4539 ;
+  color:  #ae9582 ;
 }
 
 .tm-input {
@@ -502,12 +496,16 @@ figure.effect-honey:hover h2 i {
 
 .tm-footer-link:hover,
 .tm-footer-link:focus {
-  color:  #5e4539 ;
+  color:  #ae9582 ;
   text-decoration: none;
 }
 
 p {
   line-height: 1.9;
+}
+#sendMessageButton:hover{
+  color: #fff;
+background-color:#ae9582  ;
 }
 
 @media (min-width: 768px) {

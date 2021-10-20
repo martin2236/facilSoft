@@ -29,6 +29,7 @@
       <nav class="navbar navbar-expand-md tm-navbar" id="tmNav">              
         <div class="container">   
           <div class="tm-next">
+              <img src="img/logo.png" alt="logo">
               <a href="#hero" class="navbar-brand">Fácil Soft</a>
           </div>             
             
@@ -38,7 +39,7 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item">
-                  <a class="nav-link tm-nav-link" href="#introduction">Introduccion</a>
+                  <a class="nav-link tm-nav-link" href="#introduction">Introducción</a>
               </li>
               <li class="nav-item">
                   <a class="nav-link tm-nav-link" href="#work">Nosotros</a>
@@ -84,7 +85,7 @@
                 <p class="mb-5 tm-intro-text">Empeza a facturar de una forma más sencilla 
                 <br>1 Ingresá al sistema
                 <br>2 Hacé tu factura
-                <br>3 imprimila o enviala </p>
+                <br>3 imprimila o envíala </p>
                 <div class="tm-next">
                   <a href="#work" class="tm-intro-text tm-btn-primary">Leer más</a>
                 </div>
@@ -97,7 +98,7 @@
             <i class="far fa-4x fa-clock text-center tm-icon "></i>
             <h4 class="text-center tm-text-primary mb-4">Aprovechá mejor tu tiempo</h4>
             <p>
-              Contratando nuestro sistema podrás optimizar más tus tiempos. Olvidate de los sistemas complicados que requieren muchos pasos
+              Contratando nuestro sistema podrás optimizar más tus tiempos. Olvídate de los sistemas complicados que requieren muchos pasos
               para facturar, dejá que <strong>Fácil Soft</strong> se ocupe de eso .
 
             </p>
@@ -107,8 +108,8 @@
           <i class="fas fa-4x fa-laptop text-center tm-icon"></i>
           <h4 class="text-center tm-text-primary mb-4">Facturá desde donde sea</h4>
           <p>
-           Ingresa a <strong>Fácil Soft</strong> desde cualquier medio electronico (desktop, notebook o celular), no
-           importa donde estes siempre vas a poder facturar de forma inmediata.
+           Ingresa a <strong>Fácil Soft</strong> desde cualquier medio electrónico (desktop, notebook o celular), no
+           importa donde estés siempre vas a poder facturar de forma inmediata.
           </p>
         </div>
         <div class="col-lg-4 mt-5 mt-lg-0">
@@ -208,7 +209,7 @@
 
     <!-- Contact -->
     <section id="contact" class="tm-section-pad-top tm-parallax-2">
-      <div class="container tm-container-contact">
+      <div  class="container tm-container-contact">
         <div class="row">
             <div class="col-12">
                 <h2 class="mb-4 tm-section-title">Contacto</h2>
@@ -217,7 +218,8 @@
                 </div>
                 <p class="mb-5">
                   Estamos para servirte, podes contactarnos y asesorarte sobre nuestros servicios
-                  con los miembros de nuestroequipo a travez de cualquiera de estos medios. 
+                  con los miembros de nuestro equipo a travéz de nuestra linea telefónica, Instagram o
+                  nuestro formulario de contacto. 
                   <br> Esperamos tu consulta
                 </p>
             </div>
@@ -228,24 +230,39 @@
                   <span class="mb-0">2257-637228</span>
               </a>              
             </div>
-            <div class="col-sm-12 col-md-6 d-flex align-items-center tm-contact-item">
-              <a href="mailto:info@company.co" class="tm-contact-item-link">
-                  <i class="fas fa-3x fa-envelope mr-4"></i>
-                  <span class="mb-0">facilsoft@company.com</span>
-              </a>              
-            </div>
+           
             <div class="col-sm-12 col-md-6 d-flex align-items-center tm-contact-item">
               <a href="https://www.google.com/maps" class="tm-contact-item-link">
                 <i class="fab fa-3x fa-instagram mr-4"></i>
                 <span class="mb-0">@facilsoft</span>
               </a>              
             </div>
-            <div class="col-sm-12 col-md-6 d-flex align-items-center tm-contact-item">
-              <form action="" method="get">
-                <input name="email" type="email" placeholder="Ingrese su email" class="tm-input" required />
-                <button type="submit" class="btn tm-btn-submit">Enviar</button>
-              </form>
-            </div>
+            <div class="col-md-6">
+              <div class="contact-form">
+                  <div id="success"></div>
+                    <form name="sentMessage" id="contactForm" action="contact.php" novalidate="novalidate">
+                      <div class="control-group">
+                          <input type="text" name="name" class="form-control" id="name" placeholder="Ingrese su nombre" required="required" data-validation-required-message="Por favor ingrese su nombre" />
+                          <p class="help-block text-danger"></p>
+                      </div>
+                      <div class="control-group">
+                          <input type="email" name="email" class="form-control" id="email" placeholder="Ingrese su Email" required="required" data-validation-required-message="Por favor ingrese su email" />
+                          <p class="help-block text-danger"></p>
+                      </div>
+                      <div class="control-group">
+                          <input type="text" name="subject" class="form-control" id="subject" placeholder="Ingrese un asunto" required="required" data-validation-required-message="Por favor elija un curso" />
+                          <p class="help-block text-danger"></p>
+                      </div>
+                      <div class="control-group">
+                          <textarea class="form-control" name="message" id="message" placeholder="Ingrese su mensaje" required="required" data-validation-required-message="Por favor ingrese su mensaje"></textarea>
+                          <p class="help-block text-danger"></p>
+                      </div>
+                      <div>
+                          <button class="btn" type="submit" id="sendMessageButton">Enviar mensaje</button>
+                      </div>
+                  </form>
+              </div>
+          </div>
         </div>
       </div>
       <footer class="text-center small tm-footer">
@@ -404,5 +421,6 @@
         });
       });
     </script>
+    <script src="mail/contact.js"></script>
   </body>
 </html>
