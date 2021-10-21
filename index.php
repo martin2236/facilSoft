@@ -251,21 +251,21 @@
             <div class="col-md-6">
               <div class="contact-form">
                   <div id="success"></div>
-                    <form name="sentMessage" id="contactForm" " novalidate="novalidate">
+                    <form name="sentMessage" id="contactForm" method="POST"  novalidate="novalidate">
                       <div class="control-group">
-                          <input type="text"  class="form-control" id="name" placeholder="Ingrese su nombre" required="required" data-validation-required-message="Por favor ingrese su nombre" />
+                          <input type="text" name="name" class="form-control" id="name" placeholder="Ingrese su nombre" required="required" data-validation-required-message="Por favor ingrese su nombre" />
                           <p class="help-block text-danger"></p>
                       </div>
                       <div class="control-group">
-                          <input type="email"  class="form-control" id="email" placeholder="Ingrese su Email" required="required" data-validation-required-message="Por favor ingrese su email" />
+                          <input type="email" name="email" class="form-control" id="email" placeholder="Ingrese su Email" required="required" data-validation-required-message="Por favor ingrese su email" />
                           <p class="help-block text-danger"></p>
                       </div>
                       <div class="control-group">
-                          <input type="text"  class="form-control" id="subject" placeholder="Ingrese un asunto" required="required" data-validation-required-message="Por favor elija un curso" />
+                          <input type="text" name="subject" class="form-control" id="subject" placeholder="Ingrese un asunto" required="required" data-validation-required-message="Por favor elija un curso" />
                           <p class="help-block text-danger"></p>
                       </div>
                       <div class="control-group">
-                          <textarea class="form-control"  id="message" placeholder="Ingrese su mensaje" required="required" data-validation-required-message="Por favor ingrese su mensaje"></textarea>
+                          <textarea class="form-control" name="message" id="message" placeholder="Ingrese su mensaje" required="required" data-validation-required-message="Por favor ingrese su mensaje"></textarea>
                           <p class="help-block text-danger"></p>
                       </div>
                       <div>
@@ -434,6 +434,5 @@
         });
       });
     </script>
-    <script src="mail/contact.js"></script>
   </body>
 </html>
