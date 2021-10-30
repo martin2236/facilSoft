@@ -426,7 +426,7 @@ figure.effect-honey:hover h2 i {
   color: white;
   
   background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(../img/telefono_1920x1280.jpg);
-  background-position: center;
+
    min-height: 850px;
   position: relative;
   padding-bottom: 50px;

@@ -9,8 +9,10 @@
     <meta name="robots" content="index, follow">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="language" content="Spanish">
+    <meta property="og:image" content="https://images.app.goo.gl/rBJKs97Y5zKdK47Y7">
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>fácil Soft</title>
+    <link rel="shortcut icon" href="img/icono.ico">
     <link rel="stylesheet" href="fontawesome-5.5/css/all.min.css" />
     <link rel="stylesheet" href="slick/slick.css">
     <link rel="stylesheet" href="slick/slick-theme.css">
@@ -222,7 +224,7 @@
                 </div>
                 <p class="mb-5">
                   Estamos para servirte, podes contactarnos y asesorarte sobre nuestros servicios
-                  con los miembros de nuestro equipo a travéz de nuestra linea telefónica, Instagram o
+                  con los miembros de nuestro equipo a travéz de nuestra linea telefónica, Instagram, facebook o
                   nuestro formulario de contacto. 
                   <br> Esperamos tu consulta
                 </p>
@@ -251,13 +253,17 @@
             <div class="col-md-6">
               <div class="contact-form">
                   <div id="success"></div>
-                    <form name="sentMessage" id="contactForm" method="POST"  novalidate="novalidate">
+                    <form name="sentMessage" action="index.php" id="contactForm" method="POST"  novalidate="novalidate">
                       <div class="control-group">
                           <input type="text" name="name" class="form-control" id="name" placeholder="Ingrese su nombre" required="required" data-validation-required-message="Por favor ingrese su nombre" />
                           <p class="help-block text-danger"></p>
                       </div>
                       <div class="control-group">
                           <input type="email" name="email" class="form-control" id="email" placeholder="Ingrese su Email" required="required" data-validation-required-message="Por favor ingrese su email" />
+                          <p class="help-block text-danger"></p>
+                      </div>
+                      <div class="control-group">
+                          <input type="tel" name="tel" class="form-control" id="tel" placeholder="Ingrese su telefono"  />
                           <p class="help-block text-danger"></p>
                       </div>
                       <div class="control-group">
@@ -269,7 +275,7 @@
                           <p class="help-block text-danger"></p>
                       </div>
                       <div>
-                          <button class="btn" type="submit" id="sendMessageButton">Enviar mensaje</button>
+                          <button class="btn" name="enviar" type="submit" id="sendMessageButton" onClick="clearform();">Enviar mensaje</button>
                       </div>
                   </form>
               </div>
@@ -436,3 +442,13 @@
     </script>
   </body>
 </html>
+<!--evita que el formulario se reenvie otra vez al recargar la pagina-->
+<script>
+     if ( window.history.replaceState ) {
+        window.history.replaceState( null, null, window.location.href );
+    }
+</script>
+<?php 
+require("contact.php");
+error_reporting(0);
+?>
